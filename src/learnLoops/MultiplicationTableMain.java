@@ -8,7 +8,7 @@ public class MultiplicationTableMain {
 		
 		table2.number = 1;
 		table2.printMultiple();
-
+		
 	}
 
 }
