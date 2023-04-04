@@ -7,22 +7,14 @@ public class Chocolates {
 	
 	void chocolateBox() {
 		
-		while(currentNoOfChocolate <= totalChocolate);{
-		System.out.println("add chocolates, no: of chocolates in box is: " + currentNoOfChocolate);
-		currentNoOfChocolate+=5;
-		
-		if(currentNoOfChocolate == totalChocolate) {
-		System.out.println("chocolate box is full: " + currentNoOfChocolate);
-		}
-		}
+		while(currentNoOfChocolate <= totalChocolate) {
+			System.out.println("add chocolate, no: of chocolates is " + currentNoOfChocolate);
+			currentNoOfChocolate+=5;
+			
+			if(currentNoOfChocolate == totalChocolate) {
+				System.out.println("box is full " + currentNoOfChocolate);
+				break;
+			}
 		}
 	}
-
-/*
-do{
-	System.out.println("add chocolates, no: of chocolates in box is: " + currentNoOfChocolate);
-	currentNoOfChocolate+=5;
-}
-
-while(currentNoOfChocolate <= totalChocolate);
-*/
+	}
