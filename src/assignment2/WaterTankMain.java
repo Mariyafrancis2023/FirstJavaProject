@@ -6,7 +6,8 @@ public class WaterTankMain {
 
 		WaterTank tank = new WaterTank();
 		
-		tank.waterInTank = 0;
+		tank.waterInTank = 27;
+		tank.bucketCapacity = 7;
 		tank.fillWaterTank();
 	}
 
