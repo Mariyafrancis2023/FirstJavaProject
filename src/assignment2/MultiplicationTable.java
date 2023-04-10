@@ -10,11 +10,11 @@ public class MultiplicationTable {
 		
 		System.out.println("enter the number");
 		number1 = sc.nextInt();
-		
+		System.out.println("the multiplication table of " + number1 + " is ");
 		for(int number = 1; 
 				number<=10; 
 				number++) {
-			System.out.println("the multiplication table of " + number1+ " is " + number + "*" + number1 + "=" + number*number1);	
+			System.out.println(number + "*" + number1 + "=" + number*number1);	
 		}
 	}
 
