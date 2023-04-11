@@ -23,7 +23,7 @@ public class ArrayLength {
 		}
 	}
 	
- // replace or update studentName "def" with another name "xyz"
+ // replace or update studentName "mno" with another name "xyz"
 	
 	void replaceStudentName() {
 		String name1 = "mno";		
