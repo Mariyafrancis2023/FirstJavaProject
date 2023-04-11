@@ -8,17 +8,17 @@ public class Drivinglicense {
 		boolean isLevelG2;
 		
 		void typeOfLicence() {
-			if(age>=16) 
-			{
-				System.out.println("eligible for G1");
-			}
-			else if(age>=17 && isLevelG1) 
+			if(age>=17 && isLevelG1) 
 			{
 				System.out.println("eligible for G2");
 			}
 			else if(age>=18 && isLevelG2) 
 			{
-				System.out.println("eligible for G");	
+				System.out.println("eligible for G");
+			}
+			else if(age>=16) 
+			{
+				System.out.println("eligible for G1");	
 			}
 			else 
 			{
