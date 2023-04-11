@@ -11,7 +11,7 @@ public class PhoneList {
 	String brandNameA = "apple";
 	String enteredBrandName;
 	String enteredPhoneName;
-	boolean isPhoneAvaialble=false;
+	boolean isPhoneAvaialble;
 	
 	
 	Scanner sc = new Scanner(System.in);
@@ -50,11 +50,9 @@ public class PhoneList {
 			for (int i=0; i<googlePhone.length; i++) {
 				
 				if (enteredPhoneName.equals(googlePhone[i])) {
-					
 					isPhoneAvaialble = true;
 				}
 			}
-
 			if (isPhoneAvaialble == true) {
 				System.out.println("the phone is available");
 			} else {
