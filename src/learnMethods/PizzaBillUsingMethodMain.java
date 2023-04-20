@@ -12,12 +12,13 @@ public class PizzaBillUsingMethodMain {
 		System.out.println("enter pizza size");
 		String eneteredPizzaSize = sc.next();
 		
-	//	bill.enterThePizzaSize(eneteredPizzaSize);
+		bill.enterThePizzaSize(eneteredPizzaSize);
+			
+		bill.enterPepperoniTopping(eneteredPizzaSize);
 		
-	//	bill.enterPepperoniTopping(eneteredPizzaSize,true);
+		bill.enterCheeseTopping();
 		
-		bill.enterCheeseTopping(eneteredPizzaSize, true);
-		System.out.println(bill.finalPrice);
+		bill.finalBill();
 		}
 	}
 
