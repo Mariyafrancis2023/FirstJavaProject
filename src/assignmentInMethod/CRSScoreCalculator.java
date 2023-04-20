@@ -27,60 +27,45 @@ public class CRSScoreCalculator {
 		}
 	}
 	
-	int calculateExperiencePoints(int experience) {
+	void calculateExperiencePoints(int experience) {
 		if(experience >=6) {
 			experiencePoints = 15;
-			return experiencePoints;
 		}else if(experience >=4) {
 			experiencePoints = 13;
-			return experiencePoints;
 		}else {
-			return 0;
+			experiencePoints = 0;
 		}
 	}
 	
-	int calculateAgePoints(int age) {
+	void calculateAgePoints(int age) {
 		if(age >=18 && age <= 35) {
 			agePoints = 12;
-			return agePoints;
 		}else if(age == 36) {
 			agePoints = 11;
-			return agePoints;
 		}else if(age == 37) {
 			agePoints = 10;
-			return agePoints;
 		}else if(age == 38) {
 			agePoints = 9;
-			return agePoints;
 		}else if(age == 39) {
 			agePoints = 8;
-			return agePoints;
 		}else if(age == 40) {
 			agePoints = 7;
-			return agePoints;
 		}else if(age == 41) {
 			agePoints = 6;
-			return agePoints;
 		}else if(age == 42) {
 			agePoints = 5;
-			return agePoints;
 		}else if(age == 43) {
 			agePoints = 4;
-			return agePoints;
 		}else if(age == 44) {
 			agePoints = 3;
-			return agePoints;
 		}else if(age == 45) {
 			agePoints = 2;
-			return agePoints;
 		}else if(age == 46) {
 			agePoints = 1;
-			return agePoints;
 		}else if(age == 47) {
 			agePoints = 0;
-			return agePoints;
 		}else {
-			return 0;
+			agePoints = 0;
 		}
 	}
 	
@@ -126,7 +111,7 @@ public class CRSScoreCalculator {
 	
 	void calculateAdaptabilityPoints() {
 		int relativePoints = 0;
-		System.out.println("If you have a relative  in Canada(Parents, Grand Parents, Brother, Sister, Aunt, Uncle, Nephew or Niece) who is a Canadian Citizen or PR holder: yes/no");
+		System.out.println("If you have a relative in Canada(Parents, Grand Parents, Brother, Sister, Aunt, Uncle, Nephew or Niece) who is a Canadian Citizen or PR holder: yes/no");
 		String isAnyRelativeInCanada = sc.next();
 		if(isAnyRelativeInCanada.equals("yes")) {
 			relativePoints = 5;
