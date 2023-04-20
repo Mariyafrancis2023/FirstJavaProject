@@ -1,5 +1,6 @@
 package assignmentInMethod;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class CellPhonePlansMain {
@@ -8,19 +9,30 @@ public class CellPhonePlansMain {
 		Scanner sc = new Scanner(System.in);
 		CellphonePlans plans = new CellphonePlans();
 		System.out.println("enter the brand you want to choose: Apple/Samsung");
-		String enteredBrandName = sc.next();
-		plans.phoneProductsAvailable(enteredBrandName);	
-	    String enterModelName = sc.next();
-	    plans.phoneModelPrices(enterModelName);
-
-//		plans.phoneProductsAvailable("Apple");
-//		String modelName = sc.next();
-
+		String enterBrandName = sc.next();	
+		System.out.println("available products are: "+Arrays.toString(plans.samsungPhoneModel));
+		boolean isenteredPhoneName = false;
+		do {
+		plans.getSamsungPhonesAndPrice();
+		}
+		while(isenteredPhoneName = true);
+		System.out.println("available products are: "+Arrays.toString(plans.applePhoneModel));		
+		plans.getApplePhonesAndPrice();
+		plans.getPlanProviderAvailable();
+		plans.calculateMonthlyPlanAmount();
+	    
+/////****************************************************************************/////	    
+	/*  CellPhonePlan plan = new CellPhonePlan();
+	    System.out.println("enter the brand you want to choose: Apple/Samsung");
+		String enterBrandName = sc.next();
+		plan.getPhoneProductsAvailable(enterBrandName);	
+	    String enteredModelName = sc.next();
+	    plan.getPhoneModelPrices(enteredModelName);
 	    System.out.println("select the plan you want to opt for: Rogers/Telus/Bell");
-		String enteredProviderName = sc.next();
-	    plans.planProviderAvailable(enteredProviderName);
-	    plans.monthlyAmountForSamsungPhone();
-//	    plans.monthlyAmountForApplePhone();
+		String enterProviderName = sc.next();
+	    plan.getPlanProviderAvailable(enterProviderName);
+	    plan.calculateMonthlyPlanAmount();     */
+
 	}
 
 }
