@@ -13,13 +13,13 @@ public class GuessTheStudentName {
 
 	StringBuilder sb = new StringBuilder(letterStoringArray);
 
-	String pickingStudentNameRandomly() {
+	String pickRandomStudentName() {
 		Random name = new Random();
 		int nameIndex = name.nextInt(studentName.length);
 		return studentName[nameIndex];
 	}
 
-	void hidingTheNameUsingUnderscores(String randomName) {
+	void hideTheName(String randomName) {
 		for (int i = 0; i < randomName.length(); i++) {
 			sb.insert(i, '_');
 
@@ -27,7 +27,7 @@ public class GuessTheStudentName {
 		System.out.println("you are guessing " + sb.toString());
 	}
 
-	boolean guessingTheLettersOfName(String randomName, char letterGuessed) {
+	boolean guessTheLettersOfName(String randomName, char letterGuessed) {
 		boolean isLetterFound = false;
 		for (int i = 0; i < randomName.length(); i++) {
 			if (randomName.charAt(i) == letterGuessed) {
