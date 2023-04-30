@@ -27,7 +27,7 @@ public class GuessStudentName {
 		return studentList;
 	}
 
-	String randomName = getRandomElement(studentList);
+//	String randomName = getRandomElement(studentList);
 
 	void hideTheName(String randomName) {
 		for (int i = 0; i < randomName.length(); i++) {
@@ -37,8 +37,9 @@ public class GuessStudentName {
 		System.out.println("you are guessing " + sb.toString());
 	}
 
-	private String getRandomElement(List<String> studentList2) {
-		return null;
+	String getRandomElement(List<String> studentList) {
+		String randomName = getRandomElement(studentList);
+		return randomName;
 	}
 
 	boolean guessTheLettersOfName(String randomName, char letterGuessed) {
