@@ -1,6 +1,6 @@
 package assignmentInInheritance;
 
-public class ATMBanking extends BankOperations {
+public class AtmBanking extends BankOperations {
 
 	boolean isPin = false;
 
@@ -12,7 +12,7 @@ public class ATMBanking extends BankOperations {
 		this.isPin = isPin;
 	}
 
-	public ATMBanking(double balanceAvailable) {
+	public AtmBanking(double balanceAvailable) {
 		super(balanceAvailable);
 	}
 
