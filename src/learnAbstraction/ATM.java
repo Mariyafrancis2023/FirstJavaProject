@@ -23,17 +23,21 @@ public class ATM extends BankOperations {
 				person.setPin(newPin);
 				System.out.println("pin is updated");
 			} else {
-				System.out.println("new pin cannot the same as current pin");
+				System.out.println("try again, pin should have 4 numbers");
 			}
 		} else {
-			System.out.println("incorrect pin");
+			System.out.println("updated pin cannot the same as old pin");
 		}
 	}
 
 	@Override
 	public void withdraw(double withdrawAmount) {
-		super.withdraw(withdrawAmount);
-		System.out.println(withdrawAmount + " is withdrawn");
+		if (person.getFundsAvailable() >= withdrawAmount) {
+			super.withdraw(withdrawAmount);
+			System.out.println(withdrawAmount + " is withdrawn");
+		} else {
+			System.out.println("not enough balance");
+		}
 	}
 
 	@Override
