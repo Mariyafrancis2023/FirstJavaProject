@@ -19,15 +19,15 @@ public class OnlineBanking extends BankOperations {
 		if (currentPassword.equals(person.getOnlineBankingPassword())) {
 			System.out.println("enter new password");
 			String newPassword = sc.next();
-			if (newPassword != currentPassword && newPassword.length() >= 8 || newPassword.contains("&")
-					|| newPassword.contains("$") || newPassword.contains("@")) {
+			if (newPassword != currentPassword && newPassword.length() >= 8 && !newPassword.contains("&")
+					&& !newPassword.contains("$") && !newPassword.contains("@")) {
 				person.setOnlineBankingPassword(newPassword);
 				System.out.println("password is updated");
 			} else {
-				System.out.println("new password cannot be same as current passowrd");
+				System.out.println("try again, passowrd should not be less than 8 characters and have these special characters (&,$, @)");
 			}
 		} else {
-			System.out.println("incorrect password");
+			System.out.println("updated password cannot the same as old password");
 		}
 	}
 
