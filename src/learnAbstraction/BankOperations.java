@@ -7,9 +7,7 @@ public abstract class BankOperations {
 	public abstract void changePinPassword(); 
 	
 	public void withdraw(double withdrawAmount) {
-		if (balanceAvailable >= withdrawAmount) {
 			balanceAvailable -= withdrawAmount;			
-		}
 	}
 
 	public void deposit(double depositMoney) {
