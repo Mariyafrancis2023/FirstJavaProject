@@ -37,11 +37,15 @@ public class PersonAccount {
 		return bankAccountNumber;
 	}
 
-	public String getName() {
-		return name;
-	}
-
 	public double getFundsAvailable() {
 		return fundsAvailable;
+	}
+
+	public void setFundsAvailable(double fundsAvailable) {
+		this.fundsAvailable = fundsAvailable;
+	}
+
+	public String getName() {
+		return name;
 	}
 }
