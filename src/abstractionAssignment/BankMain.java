@@ -12,52 +12,60 @@ public class BankMain {
 		PersonAccount tony = new PersonAccount("td0123", "tony", 1000, "3456", "01234567");
 		PersonAccount rony = new PersonAccount("cibc1122", "rony", 3000, "4567", "09876543");
 		PersonAccount jony = new PersonAccount("scotia01", "jony", 2500, "5678", "56781234");
-		PersonAccount[] person = {sony, bony, tony, rony, jony};
+		PersonAccount[] person = { sony, bony, tony, rony, jony };
 		Scanner sc = new Scanner(System.in);
+		System.out.println("enter the name");
+		String name = sc.next();
+		PersonAccount account = null;
+		for (int i = 0; i < person.length; i++) {
+			if (name.equals(person[i].getName())) {
+				account = person[i];
+			}
+		}
 		System.out.println("enter the banking service: ATM or Online");
-		String selectBanking = sc.nextLine();
+		String selectBanking = sc.next();
 		switch (selectBanking) {
 		case "ATM":
-			bank = new ATM(person);
-			System.out.println("enter the banking service: withdraw, deposit, viewbalance, change pin");
-			String selectServices = sc.nextLine();
+			bank = new ATM();
+			System.out.println("enter the banking service: withdraw, deposit, viewbalance, changepin");
+			String selectServices = sc.next();
 			switch (selectServices) {
 			case "withdraw":
 				System.out.println("enter the amount to be withdrawn");
 				double withdrawAmount = sc.nextDouble();
-				bank.withdraw(withdrawAmount);
+				bank.withdraw(account, withdrawAmount);
 				break;
 			case "deposit":
 				System.out.println("enter the amount to be deposited");
 				double depositAmount = sc.nextDouble();
-				bank.deposit(depositAmount);
+				bank.deposit(account, depositAmount);
 				break;
 			case "viewbalance":
-				bank.viewBalance();
+				bank.viewBalance(account);
 				break;
-			case "change pin":
-				bank.changePinPassword();
+			case "changepin":
+				bank.changePinPassword(account);
 				break;
 			}
 			break;
 
 		case "Online":
-			bank = new OnlineBanking(person);
-			System.out.println("enter the banking service: withdraw, viewbalance, change password");
-			String selectService = sc.nextLine();
+			bank = new OnlineBanking();
+			System.out.println("enter the banking service: withdraw, viewbalance, changepassword");
+			String selectService = sc.next();
 			switch (selectService) {
 			case "withdraw":
 				System.out.println("enter the amount to be withdrawn");
 				double withdrawAmount = sc.nextDouble();
-				bank.withdraw(withdrawAmount);
+				bank.withdraw(account, withdrawAmount);
 				break;
 			case "viewbalance":
-				bank.viewBalance();
+				bank.viewBalance(account);
 				break;
-			case "change password":
-				bank.changePinPassword();
+			case "changepassword":
+				bank.changePinPassword(account);
 				break;
-			}         
+			}
 			break;
 		}
 	}
