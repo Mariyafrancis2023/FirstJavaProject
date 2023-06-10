@@ -12,9 +12,9 @@ public class R1 extends Rocket {
 	//	int randomInt = (int) Math.random();
 	//	int randomInt = 25;
 		double random = Math.random()+randomInt;
-		System.out.println("first random r1"+random);
+	//	System.out.println("first random r1"+random);
 		double chanceOfExplosion = chanceOfLaunchExplosion * (getCurrentWeight() / getMaximumWeight());
-		System.out.println("chanceOfExplosion r1 "+chanceOfExplosion);
+	//	System.out.println("chanceOfExplosion r1 "+chanceOfExplosion);
 		return random > chanceOfExplosion;
 	}
 
